@@ -1,0 +1,15 @@
+    Knuth-Morris-Pratt (KMP) Algorithm:
+    The KMP algorithm is used for efficient string pattern matching. It solves the problem of finding occurrences of a given pattern within a larger text. It avoids unnecessary character comparisons by utilizing the information gathered during a pre-processing step.
+
+The algorithm works by constructing a prefix table (also known as the failure function or longest prefix suffix array) based on the pattern. This table provides information about the longest proper prefix of the pattern that is also a suffix. With this information, the algorithm can skip unnecessary character comparisons when a mismatch occurs.
+
+The KMP algorithm has a time complexity of O(n + m), where n is the length of the text and m is the length of the pattern. It is particularly efficient when the pattern has repeated substrings or when there are multiple occurrences of the pattern in the text.
+
+    Boyer-Moore Algorithm:
+    The Boyer-Moore algorithm is another efficient string pattern matching algorithm. It scans the text from right to left and compares characters of the pattern with corresponding characters in the text, starting from the end of the pattern.
+
+The algorithm utilizes two main heuristics: the bad character rule and the good suffix rule. The bad character rule allows the algorithm to skip comparisons by shifting the pattern to align the rightmost occurrence of a mismatched character in the text with the next occurrence of that character in the pattern. The good suffix rule helps to shift the pattern when a mismatch occurs but a suffix of the pattern matches the text.
+
+The Boyer-Moore algorithm has an average-case time complexity of O(n/m), where n is the length of the text and m is the length of the pattern. It is efficient for searching patterns in large texts or when the pattern has a relatively large alphabet size.
+
+Both the KMP algorithm and the Boyer-Moore algorithm are widely used for efficient string pattern matching. The choice between them depends on the characteristics of the text and the pattern being searched.
